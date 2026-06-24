@@ -9,8 +9,8 @@ if wezterm.target_triple == "x86_64-pc-windows-msvc" then
     config.font_size = 20
 elseif wezterm.target_triple:find "linux" then
     config.font_size = 20
-else
-    config.font_size = 34
+elseif wezterm.target_triple:find "darwin" then
+    config.font_size = 22
 end
 
 wezterm.on('gui-startup', function(cmd)
